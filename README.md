@@ -1,12 +1,23 @@
 # pfsense-acme-zoneedit
-patch for adding zoneedit dns provider to acme project on pfsense
+## patch for adding zoneedit dns provider to acme project on pfsense
 
-install pfSense's Patches package, then create a new custom package with settings below.  patch will modify usr/local/pkg/acme/acme.inc and create usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
+install pfSense's Patches package, then create a new custom package with settings below.  
+>url: https://raw.githubusercontent.com/gpfountz/pfsense-acme-zoneedit/main/acme-zoneedit.patch
+>
+>path stip count: 4
+>
+>base directory: /
+>
+>ignore whitespace: checked
 
-url: https://raw.githubusercontent.com/gpfountz/pfsense-acme-zoneedit/main/acme-zoneedit.patch
+Fetch patch, then apply
 
-path stip count: 4
+patch will modify usr/local/pkg/acme/acme.inc and create usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
 
-base directory: /
+---
 
-ignore whitespace: checked
+patch created by
+- cloning pfsense FreeBSD repository
+- modify usr/local/pkg/acme/acme.inc
+- create usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
+- git format-patch -1 [commit]
