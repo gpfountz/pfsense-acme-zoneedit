@@ -14,6 +14,7 @@ Fetch patch, then apply
 
 patch will modify usr/local/pkg/acme/acme.inc and create usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
 
+this work is built upon https://github.com/blueslow/sslcertzoneedit
 ---
 
 patch created by
