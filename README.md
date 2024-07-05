@@ -4,7 +4,7 @@
 install pfSense's Patches package, then create a new custom package with settings below.  
 >url: https://raw.githubusercontent.com/gpfountz/pfsense-acme-zoneedit/main/acme-zoneedit.patch
 >
->path stip count: 4
+>path strip count: 4
 >
 >base directory: /
 >
