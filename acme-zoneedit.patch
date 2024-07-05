@@ -7,7 +7,7 @@ diff --git a/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc b/secur
 index 1b9b06a29f8b..1741d8ae72fe 100644
 --- a/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc
 +++ b/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc
-@@ -2746,6 +2746,22 @@  		],
+@@ -2746,5 +2746,22 @@  		],
  	]
  ];
 +$acme_domain_validation_method['dns_zoneedit'] = [
