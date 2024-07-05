@@ -1,6 +1,8 @@
 # pfsense-acme-zoneedit
 ## patch for adding zoneedit dns provider to acme project on pfsense
 
+patch will modify usr/local/pkg/acme/acme.inc and create usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
+
 install pfSense's Patches package, then create a new custom package with settings below.  
 >url: https://raw.githubusercontent.com/gpfountz/pfsense-acme-zoneedit/main/acme-zoneedit.patch
 >
@@ -12,9 +14,10 @@ install pfSense's Patches package, then create a new custom package with setting
 
 Fetch patch, then apply
 
-patch will modify usr/local/pkg/acme/acme.inc and create usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
+NOTE: if you dont see the option to apply or revert this patch, try removing usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
 
 this work is built upon https://github.com/blueslow/sslcertzoneedit
+
 ---
 
 patch created by
