@@ -4,36 +4,36 @@
  create mode 100644 security/pfSense-pkg-acme/files/usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
 
 diff --git a/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc b/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc
-index 1b9b06a29f8b..1741d8ae72fe 100644
+index 35b2e7265093..fad523196d56 100644
 --- a/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc
 +++ b/security/pfSense-pkg-acme/files/usr/local/pkg/acme/acme.inc
-@@ -2746,6 +2746,23 @@ $acme_domain_validation_method['anydns'] = [
+@@ -2838,6 +2838,23 @@ $acme_domain_validation_method['anydns'] = [
  		],
  	]
  ];
 +$acme_domain_validation_method['dns_zoneedit'] = [
-+    'name' => "DNS-Zoneedit",
-+    'fields' => [
-+        'ZONEEDIT_ID' => [
-+            'name' => "zoneedit_id", 
-+            'columnheader' => "ID", 
-+            'type' => "textbox",
-+            'description' => "ZONEEDIT ID"
-+        ],
-+        'ZONEEDIT_Token' => [
-+            'name' => "zoneedit_token",
-+            'columnheader' => "Token", 
-+            'type' => "textbox",
-+            'description' => "ZONEEDIT Token"
-+        ],
-+    ]
++	'name' => 'DNS-Zoneedit',
++	'fields' => [
++		'ZONEEDIT_ID' => [
++			'name' => 'zoneedit_id',
++			'description' => 'ZONEEDIT ID',
++			'columnheader' => 'ID',
++			'type' => 'textbox',
++		],
++		'ZONEEDIT_Token' => [
++			'name' => 'zoneedit_token',
++			'description' => 'ZONEEDIT Token',
++			'columnheader' => 'Token',
++			'type' => 'textbox',
++		],
++	]
 +];
  
  //TODO add more challenge validation types
  /*
 diff --git a/security/pfSense-pkg-acme/files/usr/local/pkg/acme/dnsapi/dns_zoneedit.sh b/security/pfSense-pkg-acme/files/usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
 new file mode 100644
-index 000000000000..7ea16f75724a
+index 000000000000..bf8acb04a216
 --- /dev/null
 +++ b/security/pfSense-pkg-acme/files/usr/local/pkg/acme/dnsapi/dns_zoneedit.sh
 @@ -0,0 +1,145 @@
@@ -183,4 +183,4 @@ index 000000000000..7ea16f75724a
 +  return 1
 +}
 -- 
-2.34.1
+2.43.0
